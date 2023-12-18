@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+      <div class="toggle-container">
+        <span class="toggle-label">Emlak Ofisi</span>
+        <label class="toggle-switch">
+            <input type="checkbox" onchange="toggleForm()">
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
+    <div class="form-container" id="form1">
+        <label for="fname">Adın</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Soyadın</label>
+        <input type="text" id="lname" name="lname">
+
+        <label for="lname">Şifreniz</label>
+        <input type="text" id="password" > 
+
+        <label for="pnumber">Cep Telefonu</label>
+        <input type="text" id="pnumber" name="pnumber">
+
+        <label for="hnumber">Ev Telefonu</label>
+        <input type="text" id="hnumber" name="hnumber">
+
+        <label for="madress">Mail Adresi</label>
+        <input type="text" id="madress" name="madress">
+        <br>
+        <button id="submitBtn">Submit</button>
+    </div>
+    <div class="form-container" id="form2" style="display: none;">
+        <label for="EstateName">Emlak Ofisi Adı</label>
+        <input type="text" id="EstateName" >
+        <label for="AuthorizerName">Yetkili Adı Soyadı</label>
+        <input type="text" id="AuthorizerName" >
+        <label for="Adress">Adres</label>
+        <input type="text" id="Adress" >
+         <label for="MailAdress">Mail Adresi</label>
+        <input type="text" id="MailAdress" >
+        <label for="PostalCode">Posta Kodu</label>
+        <input type="text" id="PostalCode" >
+        <label for="Phone">Telefon</label>
+        <input type="text" id="Phone" >
+        <label for="Fax">Fax</label>
+        <input type="text" id="Fax" >
+        <br>
+        <button id="submitBtn2">Submit</button>
+    </div>
+    <script src="~/js/SignUp.js asp-append-version="true"></script>
