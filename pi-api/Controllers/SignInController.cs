@@ -11,10 +11,10 @@ namespace pi_api.Controllers
     [Route("[controller]")]
     public class SignInController : ControllerBase
     {
-        private readonly AgentService _agentService;
-        private readonly CustomerService _customerService;
-        private readonly EstateService _estateService;
-        public SignInController(AgentService agentService, CustomerService customerService, EstateService estateService)
+        private readonly IAgentService _agentService;
+        private readonly ICustomerService _customerService;
+        private readonly IEstateService _estateService;
+        public SignInController(IAgentService agentService, ICustomerService customerService, IEstateService estateService)
         {
             _agentService = agentService;
             _customerService = customerService;
@@ -34,7 +34,6 @@ namespace pi_api.Controllers
         [HttpPost(Name = "SignIn")]
         public UserResponse Post(RequestDTO user)
          {
-
             bool IsCustomer = _customerService.IsExistEmailAndPass(user.MailAdress, user.Password);
             bool IsAgent = _agentService.IsExitsByEmailAndPass(user.MailAdress, user.Password);
             if (IsCustomer)

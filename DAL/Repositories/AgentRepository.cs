@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
-    public class AgentRepository : IRepository<Agent>, IControlRepository<Agent>
+    public class AgentRepository : IRepository<Agent>,IControlRepository<Agent>
     {
         private readonly ApplicationDbContext _context;
 
