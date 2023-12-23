@@ -17,17 +17,17 @@ namespace BLL.Configurations
     {
         public static void AddTest(this IServiceCollection services)
         {
-           
+            
             services.AddScoped<IRepository<Agent>, AgentRepository>();
             services.AddScoped<IRepository<Estate>, EstateRepository>();
             services.AddScoped<IRepository<Customer>, CustomerRepository>();
             services.AddScoped<IControlRepository<Agent>, AgentRepository>();
             services.AddScoped<IControlRepository<Customer>, CustomerRepository>();
+            services.ImplementPersistence();
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
             });
-
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
         }

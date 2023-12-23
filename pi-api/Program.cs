@@ -27,13 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
-
 app.UseCors("corsapp");
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
